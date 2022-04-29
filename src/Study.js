@@ -40,14 +40,14 @@ function Study() {
         if (deckId) {
             loadDeck();
         }
-      }, []);
+      }, [deckId]);
     return (
         <div>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item active"><a href="#">Home</a></li>
+                    <li className="breadcrumb-item active"><Link to="/">Home</Link></li>
                     <li className="breadcrumb-item active" aria-current="page">{deck.name}</li>
-                    <li className="breadcrumb-item"><a href="Study">Study</a></li>
+                    <li className="breadcrumb-item"><Link to="/">Study</Link></li>
                 </ol>
             </nav>
             <Link to="/decks/new">Create Deck</Link>

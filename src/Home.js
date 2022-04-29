@@ -19,7 +19,7 @@ function Home() {
     return (
         <div>
             <Link to="/decks/new">Create Deck</Link>
-            {decks.map(deck => <div>
+            {decks.map(deck => <div key={deck.id}>
                 <h2>{deck.name}</h2>
                 <p>{deck.cards.length} cards</p>
             <Link to={`/decks/${deck.id}`}>view</Link>

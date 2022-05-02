@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {} from "./utils/api";
 import { Link, useHistory } from "react-router-dom";
 import { createDeck } from "./utils/api";
+import CardForm from "./CardForm";
 
 function CreateDeck() {
   const history = useHistory();
@@ -36,20 +37,7 @@ function CreateDeck() {
         <div>
           Create Deck   
         </div>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="formGroupExampleInput" className="form-label">Name</label>
-            <input type="text" className="form-control" id="name" name="name" onChange={handleChange}
-          value={formData.name} placeholder="Deck Name" />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="formGroupExampleInput2" className="form-label">Description</label>
-            <textarea type="text" className="form-control" id="description" name="description" onChange={handleChange}
-          value={formData.description} placeholder="Brief description of the deck"></textarea>
-          </div>
-          <Link to="/">Cancel</Link>
-          <button>Submit</button>
-        </form>
+        <CardForm formData={formData} handleSubmit={handleSubmit} handleChange={handleChange} />
       </div>
 
     )

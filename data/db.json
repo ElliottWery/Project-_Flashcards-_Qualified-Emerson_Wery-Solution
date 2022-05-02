@@ -40,7 +40,7 @@
     },
     {
       "id": 2,
-      "front": "How do you modify the state of a different React component?",
+      "front": "How do you modify the state of a different React component? here is a modification",
       "back": "Not at all! State is visible to the component only.",
       "deckId": 1
     },
@@ -68,6 +68,12 @@
       "back": "deckId",
       "deckId": 4,
       "id": 9
+    },
+    {
+      "front": "here is the front",
+      "back": "here is the back",
+      "deckId": 1,
+      "id": 10
     }
   ]
 }
